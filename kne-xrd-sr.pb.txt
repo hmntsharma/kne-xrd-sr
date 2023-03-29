@@ -1,0 +1,460 @@
+name: "kne-xrd-sr"
+nodes: {
+    name: "ansible"
+    vendor: HOST
+    model: "linux"
+    os: "ubuntu"
+    config: {
+        image: "ghcr.io/hmntsharma/ansible-cisco-sr-lab:latest"
+    }
+}
+nodes: {
+    name: "xrd-1"
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        image: "localhost/ios-xr:7.7.1"
+        file: "xrd-1-startup.cfg"
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+}
+nodes: {
+    name: "xrd-2"
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        image: "localhost/ios-xr:7.7.1"
+        file: "xrd-2-startup.cfg"
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    }
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+    interfaces: {
+        key: "eth4"
+        value: {
+          name: "GigabitEthernet0/0/0/3"
+        }
+    }
+    interfaces: {
+        key: "eth6"
+        value: {
+          name: "GigabitEthernet0/0/0/5"
+        }
+    }
+}
+nodes: {
+    name: "xrd-3"
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        image: "localhost/ios-xr:7.7.1"
+        file: "xrd-3-startup.cfg"
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    }
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+    interfaces: {
+        key: "eth4"
+        value: {
+          name: "GigabitEthernet0/0/0/3"
+        }
+    }
+}
+nodes: {
+    name: "xrd-4"
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        image: "localhost/ios-xr:7.7.1"
+        file: "xrd-4-startup.cfg"
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    }
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+    interfaces: {
+        key: "eth5"
+        value: {
+          name: "GigabitEthernet0/0/0/4"
+        }
+    }
+}
+nodes: {
+    name: "xrd-5"
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        image: "localhost/ios-xr:7.7.1"
+        file: "xrd-5-startup.cfg"
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+}
+nodes: {
+    name: "xrd-6"
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        image: "localhost/ios-xr:7.7.1"
+        file: "xrd-6-startup.cfg"
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    }
+}
+nodes: {
+    name: "xrd-7"
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        image: "localhost/ios-xr:7.7.1"
+        file: "xrd-7-startup.cfg"
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth1"
+        value: {
+          name: "GigabitEthernet0/0/0/0"
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    }
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+    interfaces: {
+        key: "eth4"
+        value: {
+          name: "GigabitEthernet0/0/0/3"
+        }
+    }
+    interfaces: {
+        key: "eth5"
+        value: {
+          name: "GigabitEthernet0/0/0/4"
+        }
+    }
+}
+nodes: {
+    name: "xrd-8"
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        image: "localhost/ios-xr:7.7.1"
+        file: "xrd-8-startup.cfg"
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth2"
+        value: {
+          name: "GigabitEthernet0/0/0/1"
+        }
+    }
+    interfaces: {
+        key: "eth3"
+        value: {
+          name: "GigabitEthernet0/0/0/2"
+        }
+    }
+}
+nodes: {
+    name: "xrd-9"
+    vendor: CISCO
+    model: "xrd"
+    os: "ios-xr"
+    config: {
+        image: "localhost/ios-xr:7.7.1"
+        file: "xrd-9-startup.cfg"
+    }
+    services:{
+        key: 22
+        value: {
+            name: "ssh"
+            inside: 22
+        }
+    }
+    services:{
+        key: 57400
+        value: {
+            name: "gnmi"
+            inside: 57400
+        }
+    }
+    interfaces: {
+        key: "eth4"
+        value: {
+          name: "GigabitEthernet0/0/0/3"
+        }
+    }
+    interfaces: {
+        key: "eth6"
+        value: {
+          name: "GigabitEthernet0/0/0/5"
+        }
+    }
+}
+links: {
+    a_node: "xrd-1"
+    a_int: "eth3"
+    z_node: "xrd-2"
+    z_int: "eth3"
+}
+links: {
+    a_node: "xrd-2"
+    a_int: "eth1"
+    z_node: "xrd-3"
+    z_int: "eth1"
+}
+links: {
+    a_node: "xrd-2"
+    a_int: "eth2"
+    z_node: "xrd-6"
+    z_int: "eth2"
+}
+links: {
+    a_node: "xrd-2"
+    a_int: "eth4"
+    z_node: "xrd-7"
+    z_int: "eth4"
+}
+links: {
+    a_node: "xrd-2"
+    a_int: "eth6"
+    z_node: "xrd-9"
+    z_int: "eth6"
+}
+links: {
+    a_node: "xrd-3"
+    a_int: "eth2"
+    z_node: "xrd-7"
+    z_int: "eth2"
+}
+links: {
+    a_node: "xrd-3"
+    a_int: "eth3"
+    z_node: "xrd-4"
+    z_int: "eth3"
+}
+links: {
+    a_node: "xrd-3"
+    a_int: "eth4"
+    z_node: "xrd-9"
+    z_int: "eth4"
+}
+links: {
+    a_node: "xrd-4"
+    a_int: "eth1"
+    z_node: "xrd-5"
+    z_int: "eth1"
+}
+links: {
+    a_node: "xrd-4"
+    a_int: "eth2"
+    z_node: "xrd-8"
+    z_int: "eth2"
+}
+links: {
+    a_node: "xrd-4"
+    a_int: "eth5"
+    z_node: "xrd-7"
+    z_int: "eth5"
+}
+links: {
+    a_node: "xrd-6"
+    a_int: "eth1"
+    z_node: "xrd-7"
+    z_int: "eth1"
+}
+links: {
+    a_node: "xrd-7"
+    a_int: "eth3"
+    z_node: "xrd-8"
+    z_int: "eth3"
+}
